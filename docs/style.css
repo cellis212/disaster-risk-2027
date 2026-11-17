@@ -79,13 +79,15 @@ nav .nav-register:hover { background: #f0f2eb; text-decoration: none; }
 .section-intro { max-width: 41rem; }
 .section-kicker { color: #526456; margin-bottom: .68rem; }
 .section-intro > p:not(.eyebrow) { margin-top: .9rem; }
-.venues {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem;
+.program-timezone { color: var(--muted); font-size: .88rem; }
+.program-days {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 1rem;
   margin-top: 1.65rem;
 }
+.program-day { border: 1px solid var(--line); border-radius: .4rem; }
 .venue {
   display: flex; align-items: center; gap: .95rem 1.18rem;
-  background: #f7f8f2; border: 1px solid var(--line); border-radius: .4rem; padding: 1.05rem;
+  background: #f7f8f2; border-bottom: 1px solid var(--line); border-radius: .4rem .4rem 0 0; padding: 1.05rem;
 }
 .venue time { flex: 0 0 5.25rem; align-self: stretch; border-right: 1px solid var(--line); padding-right: .65rem; }
 .venue time strong { display: block; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; color: var(--ink); line-height: 1.15; }
@@ -94,11 +96,18 @@ nav .nav-register:hover { background: #f0f2eb; text-decoration: none; }
 .venue h3 a:hover { text-decoration: underline; }
 .venue h3 span { color: var(--muted); font-size: .86em; }
 .venue p { margin-top: .27rem; color: var(--muted); font-size: .88rem; }
-.speakers { margin-top: 2.45rem; }
-.speaker-list, .attendee-list { margin: .75rem 0 0; padding: 0; list-style: none; }
-.speaker-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 1.25rem; }
-.speaker-list li { border-top: 1px solid var(--line); padding: .7rem 0; }
-.speaker-list span { display: block; color: var(--muted); font-size: .88rem; line-height: 1.4; }
+.schedule { margin: 0; padding: 0; list-style: none; }
+.schedule li {
+  display: grid; grid-template-columns: minmax(8.5rem, 34%) minmax(0, 1fr);
+  align-items: baseline; gap: .65rem;
+  padding: .7rem 1.05rem; line-height: 1.4;
+}
+.schedule li + li { border-top: 1px solid var(--line); }
+.schedule-time { color: var(--muted); font-size: .86rem; font-variant-numeric: tabular-nums; }
+.schedule a { color: var(--ink); font-weight: 650; }
+.schedule a:hover { color: #006e61; }
+.schedule-detail { display: block; margin-top: .12rem; color: var(--muted); font-size: .84rem; }
+.schedule-break { background: #f7f8f2; color: var(--muted); font-size: .9rem; }
 .hotel-section { background: var(--pale); }
 .hotel-inner { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(13rem, 1fr); gap: 1.8rem 4rem; padding-block: clamp(3rem, 6vw, 4.5rem); }
 .hotel-inner .section-intro { max-width: 33rem; }
@@ -134,7 +143,7 @@ fieldset { margin: 0; border: 0; padding: 0; min-inline-size: 0; }
 .attendee-inner { padding-block: clamp(2.8rem, 5.5vw, 4.1rem); }
 .attendee-panel { margin-top: .95rem; }
 .attendee-panel > p { color: var(--muted); font-size: .94rem; }
-.attendee-list { border-top: 1px solid #c8cec2; }
+.attendee-list { margin: .75rem 0 0; padding: 0; list-style: none; border-top: 1px solid #c8cec2; }
 .attendee-list li {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: .2rem 1rem;
   border-bottom: 1px solid #c8cec2; padding: .53rem .1rem; overflow-wrap: anywhere;
@@ -163,12 +172,12 @@ fieldset { margin: 0; border: 0; padding: 0; min-inline-size: 0; }
   .hero { background-position: calc(100% + 16rem) center; }
   .hero h1 { max-width: 10em; }
   .desktop-break { display: none; }
-  .venues, .hotel-inner, .registration { grid-template-columns: minmax(0, 1fr); }
-  .speaker-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .program-days, .hotel-inner, .registration { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 29rem) {
   .hero { background-image: linear-gradient(90deg, #182520 6%, transparent 68%), url("contours.svg"); background-size: auto, auto 96%; }
   .hero-kicker { font-size: .7rem; gap: .35rem; letter-spacing: .085em; }
   .hero-kicker span { flex-basis: 1rem; }
   .form-grid, .attendee-list li { grid-template-columns: minmax(0, 1fr); }
+  .schedule li { grid-template-columns: minmax(7rem, 40%) minmax(0, 1fr); padding-inline: .8rem; }
 }
