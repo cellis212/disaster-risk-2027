@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 590" fill="none">
+  <defs>
+    <path id="contour" d="M294-91C467-63 524 1 509 92c-13 77-94 99-92 170 2 62 70 73 70 137 0 65-71 105-196 201"/>
+    <radialGradient id="fade" cx=".73" cy=".46" r=".7">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="map-fade"><rect width="740" height="590" fill="url(#fade)"/></mask>
+  </defs>
+  <g mask="url(#map-fade)">
+    <g stroke="#97b2a2" stroke-width="1.1" opacity=".42">
+      <use href="#contour" x="-193"/><use href="#contour" x="-175"/>
+      <use href="#contour" x="-157"/><use href="#contour" x="-139"/>
+      <use href="#contour" x="-121"/><use href="#contour" x="-103"/>
+      <use href="#contour" x="-85"/><use href="#contour" x="-67"/>
+      <use href="#contour" x="-49"/><use href="#contour" x="-31"/>
+      <use href="#contour" x="-13"/><use href="#contour" x="18"/>
+      <use href="#contour" x="36"/><use href="#contour" x="54"/>
+      <use href="#contour" x="72"/><use href="#contour" x="90"/>
+      <use href="#contour" x="108"/><use href="#contour" x="126"/>
+      <use href="#contour" x="144"/><use href="#contour" x="162"/>
+      <use href="#contour" x="180"/><use href="#contour" x="198"/>
+      <use href="#contour" x="216"/><use href="#contour" x="234"/>
+      <use href="#contour" x="252"/><use href="#contour" x="270"/>
+      <use href="#contour" x="288"/><use href="#contour" x="306"/>
+      <use href="#contour" x="324"/><use href="#contour" x="342"/>
+    </g>
+    <use href="#contour" stroke="#f9cd62" stroke-width="1.65" opacity=".78"/>
+    <circle cx="418" cy="260" r="14" stroke="#f9cd62" opacity=".45"/>
+    <circle cx="418" cy="260" r="4.5" fill="#f9cd62"/>
+  </g>
+</svg>
